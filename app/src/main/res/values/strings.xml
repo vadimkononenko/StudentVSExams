@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">StudentVSExams</string>
+    <string name="restart">restart</string>
+    <string name="left">left</string>
+    <string name="right">right</string>
+    <string name="play">play</string>
 </resources>
