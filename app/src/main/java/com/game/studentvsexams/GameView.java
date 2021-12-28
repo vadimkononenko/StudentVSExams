@@ -15,8 +15,8 @@ public class GameView extends SurfaceView implements Runnable {
     public static float unitW = 0; // пикселей в юните по горизонтали
     public static float unitH = 0; // пикселей в юните по вертикали
 
-    private ArrayList<Deadline> deadlines = new ArrayList<>(); // тут будут харанится астероиды
-    private final int DEADLINE_INTERVAL = 10; // время через которое появляются астероиды (в итерациях)
+    private ArrayList<Deadline> deadlines = new ArrayList<>(); // тут будут харанится дедлайны
+    private final int DEADLINE_INTERVAL = 10; // время через которое появляются дедлайны (в итерациях)
     private int currentTime = 0;
 
     private boolean firstTime = true;
@@ -64,15 +64,15 @@ public class GameView extends SurfaceView implements Runnable {
                 unitW = surfaceHolder.getSurfaceFrame().width()/maxX; // вычисляем число пикселей в юните
                 unitH = surfaceHolder.getSurfaceFrame().height()/maxY;
 
-                student = new Student(getContext()); // добавляем корабль
+                student = new Student(getContext()); // добавляем студента
             }
 
             canvas = surfaceHolder.lockCanvas(); // закрываем canvas
-            canvas.drawColor(Color.RED); // заполняем фон чёрным
+            canvas.drawColor(Color.RED); // заполняем фон красным
 
-            student.drow(paint, canvas); // рисуем корабль
+            student.drow(paint, canvas); // рисуем студента
 
-            for (Deadline deadline: deadlines) { // рисуем астероиды
+            for (Deadline deadline: deadlines) { // рисуем дедлайны
                 deadline.drow(paint, canvas);
             }
 

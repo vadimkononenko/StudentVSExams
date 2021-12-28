@@ -29,10 +29,10 @@ public class Deadline extends Body{
     public boolean isCollision(float studentX, float studentY,float studentSize) {
         return !(((x+size) < studentX)||(x > (studentX+studentSize))||((y+size) < studentY)||(y > (studentY+studentSize)));
         /*
-        ((x+size) < shipX) — корабль слева от астероида.
-        (x > (shipX+shipSize)) — корабль справа от астероида.
-        ((y+size) < shipY) — корабль сверху астероида.
-        (y > (shipY+shipSize)) — корабль снизу астероида.
+        ((x+size) < shipX) — студент слева от дедлайн.
+        (x > (shipX+shipSize)) — студент справа от дедлайн.
+        ((y+size) < shipY) — студент сверху дедлайн.
+        (y > (shipY+shipSize)) — студент снизу дедлайн.
          */
     }
 }

@@ -4,7 +4,7 @@ import android.content.Context;
 
 public class Student extends Body{
     public Student(Context context) {
-        bitmapId = R.drawable.graduated;  // определяем начальные параметры
+        bitmapId = R.drawable.graduated;
         size = 2.5f;
         x = 7;
         y =  GameView.maxY - size - 1;
